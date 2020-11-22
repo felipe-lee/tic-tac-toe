@@ -85,6 +85,7 @@ class Game extends React.Component {
     jumpTo(move) {
         this.setState({
             moveNumber: move,
+            winner: calculateWinner(this.state.history[move]),
             xIsNext: (move % 2) === 0,
         })
     }
